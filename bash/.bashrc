@@ -77,6 +77,6 @@ export GOPATH="/usr/local/etc/go"
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 bashrc_local="$HOME/.bashrc.local"
-if [ -d $bashrc_local ] ; then
+if [ -f $bashrc_local ] ; then
   source $bashrc_local
 fi
