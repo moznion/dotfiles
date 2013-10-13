@@ -462,9 +462,9 @@ nnoremap # :<C-u>set hlsearch<Return>#
 "----------------------------------------------------------------------------
 set tabstop=4
 set shiftwidth=4
-set backspace=indent,eol,start  "Enable to delete indent and newline by backspace
-set showmatch                   "Showing correspond parenthesis
-set clipboard+=unnamed          "Use OS clip board
+set backspace=indent,eol,start   "Enable to delete indent and newline by backspace
+set showmatch                    "Showing correspond parenthesis
+set clipboard=unnamed,autoselect "Use OS clip board
 
 " Indent {{{
 set autoindent
