@@ -123,10 +123,6 @@ NeoBundleLazy 'vim-scripts/ruby-matchit', {
 NeoBundleLazy 'rhysd/vim-textobj-ruby', {
                 \ 'autoload': { 'filetypes': 'ruby' }
               \ }
-NeoBundleLazy 'skwp/vim-rspec', {
-                \ 'depends': ['rson/vim-conque', 'skwp/vim-ruby-conque'],
-                \ 'autoload': { 'filetypes': 'ruby' }
-              \ }
 NeoBundleLazy 'Shougo/neocomplcache-rsense', {
                 \ 'depends': 'Shougo/neocomplcache',
                 \ 'autoload': { 'filetypes': 'ruby' }
