@@ -130,6 +130,16 @@ NeoBundleLazy 'Shougo/neocomplcache-rsense', {
 NeoBundleLazy 'taichouchou2/vim-rsense', {
                 \ 'autoload': { 'filetypes': 'ruby' }
               \ }
+NeoBundleLazy 'alpaca-tc/neorspec.vim', {
+              \ 'depends' : 'tpope/vim-rails',
+              \ 'autoload' : {
+              \   'commands' : [
+              \       'RSpecAll', 'RSpecNearest', 'RSpecRetry',
+              \       'RSpecCurrent', 'RSpec'
+              \ ] }}
+NeoBundleLazy 'tpope/vim-dispatch', { 'autoload' : {
+              \ 'commands' : ['Dispatch', 'FocusDispatch', 'Start']
+              \ }}
 "}}}
 
 " JavaScript {{{
