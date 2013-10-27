@@ -56,6 +56,7 @@ alias :q='exit'
 alias sl='ls'
 alias be='bundle exec'
 alias ce='carton exec'
+alias perldoc='perldoc -MPod::Text::Color::Delight'
 
 # Golang
 program_exists () {
