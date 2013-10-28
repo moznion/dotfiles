@@ -45,8 +45,6 @@ export GIT_PS1_SHOWSTASHSTATE=1
 export PS1="\[\033[7;32m\]\u@\H\[\033[7;34m\] \w\[\033[7;35m\]\$(__git_ps1)\[\033[00m\] \$"
 
 # Vim
-# alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-# alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias vi='vim'
 
 # Alias
@@ -56,6 +54,7 @@ alias :q='exit'
 alias sl='ls'
 alias be='bundle exec'
 alias ce='carton exec'
+alias perldoc='perldoc -MPod::Text::Color::Delight'
 
 # Golang
 program_exists () {
