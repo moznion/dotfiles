@@ -82,3 +82,5 @@ bashrc_local="$HOME/.bashrc.local"
 if [ -f $bashrc_local ] ; then
   source $bashrc_local
 fi
+
+export LANG=ja_JP.UTF-8
