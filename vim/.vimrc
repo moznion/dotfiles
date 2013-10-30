@@ -38,7 +38,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'moznion/unite-git-conflict.vim'
-NeoBundle 'molokai'
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'moznion/hateblo.vim'
 "}}}
@@ -572,7 +572,8 @@ set cmdheight=2
 " Setting of color scheme {{{
 if !has('win32unix')
   set t_Co=256
-  colorscheme molokai
+  set background=dark
+  colorscheme solarized
 endif
 "}}}
 
