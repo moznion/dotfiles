@@ -1,0 +1,74 @@
+snippet dump
+    use Data::Dumper::Concise; warn Dumper(${1:code}); # TODO remove
+
+snippet peek
+    use Devel::Peek; warn Dump(${1:code}); # TODO remove
+
+snippet print
+    print "${1:msg}\n";
+
+snippet warn
+    warn "${1:msg}";
+
+snippet if
+    if (${1:cond}) {
+    }
+
+snippet foreach
+    foreach my ${2:iter} (${1:list}) {
+    }
+
+snippet s
+    my ($self${1}) = @_;
+
+snippet has
+    has ${1:member} => (
+        is  => '${2:writability}',
+        isa => '${3:type}',
+    );
+
+snippet fb
+    use FindBin;
+    use lib ("$FindBin::Bin/../lib");
+
+snippet subtest
+    subtest '${1:name}' => sub {
+        ${2:codes}
+    };
+
+snippet dd
+    use Data::Dumper;
+    local $Data::Dumper::Indent = 1;
+    local $Data::Dumper::Terse  = 1;
+    warn Dumper
+
+snippet dds
+    use Data::Dump::Streamer qw(Dumper);
+    warn Dumper
+
+snippet ex
+    use parent qw(Exporter);
+    our @EXPORT_OK = qw();
+
+snippet plack
+    use Plack::Request;
+    sub {
+        my $req = Plack::Request->new($_[0]);
+        given ($req->path) {
+            when ('/') {
+                $req->param('');
+                return [200, ["Content-Type" => "text/html"], ['200 OK']];
+            }
+        }
+        return [404, ["Content-Type" => "text/plain"], ['404 Not Found']];
+    };
+
+snippet file
+    use Path::Class qw(file);
+    my @lines = file(__FILE__)->dir->file('/path/to/file')->slurp;
+
+snippet r200
+    [ 200, ['Content-Type', 'text/plain'], ['200 OK'] ]
+
+snippet r404
+    [ 404, ['Content-Type', 'text/plain'], ['404 Not Found'] ]

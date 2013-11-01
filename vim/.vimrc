@@ -38,7 +38,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'moznion/unite-git-conflict.vim'
-NeoBundle 'molokai'
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'moznion/hateblo.vim'
 "}}}
@@ -123,10 +123,6 @@ NeoBundleLazy 'vim-scripts/ruby-matchit', {
 NeoBundleLazy 'rhysd/vim-textobj-ruby', {
                 \ 'autoload': { 'filetypes': 'ruby' }
               \ }
-NeoBundleLazy 'skwp/vim-rspec', {
-                \ 'depends': ['rson/vim-conque', 'skwp/vim-ruby-conque'],
-                \ 'autoload': { 'filetypes': 'ruby' }
-              \ }
 NeoBundleLazy 'Shougo/neocomplcache-rsense', {
                 \ 'depends': 'Shougo/neocomplcache',
                 \ 'autoload': { 'filetypes': 'ruby' }
@@ -134,6 +130,16 @@ NeoBundleLazy 'Shougo/neocomplcache-rsense', {
 NeoBundleLazy 'taichouchou2/vim-rsense', {
                 \ 'autoload': { 'filetypes': 'ruby' }
               \ }
+NeoBundleLazy 'alpaca-tc/neorspec.vim', {
+              \ 'depends' : 'tpope/vim-rails',
+              \ 'autoload' : {
+              \   'commands' : [
+              \       'RSpecAll', 'RSpecNearest', 'RSpecRetry',
+              \       'RSpecCurrent', 'RSpec'
+              \ ] }}
+NeoBundleLazy 'tpope/vim-dispatch', { 'autoload' : {
+              \ 'commands' : ['Dispatch', 'FocusDispatch', 'Start']
+              \ }}
 "}}}
 
 " JavaScript {{{
@@ -566,7 +572,8 @@ set cmdheight=2
 " Setting of color scheme {{{
 if !has('win32unix')
   set t_Co=256
-  colorscheme molokai
+  set background=dark
+  colorscheme solarized
 endif
 "}}}
 

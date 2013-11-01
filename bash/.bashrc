@@ -55,6 +55,7 @@ alias sl='ls'
 alias be='bundle exec'
 alias ce='carton exec'
 alias perldoc='perldoc -MPod::Text::Color::Delight'
+alias date='LANG=en_US.UTF-8 date'
 
 # Golang
 program_exists () {
@@ -80,3 +81,5 @@ bashrc_local="$HOME/.bashrc.local"
 if [ -f $bashrc_local ] ; then
   source $bashrc_local
 fi
+
+export LANG=ja_JP.UTF-8
