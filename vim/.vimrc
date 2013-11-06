@@ -524,6 +524,10 @@ augroup SkeletonAu
   au BufNewFile *.t 0r ~/.vim/skeletons/skeleton.t
   au BufNewFile *.rb 0r ~/.vim/skeletons/skeleton.rb
   au BufNewFile Makefile.PL 0r ~/.vim/skeletons/skeleton.Makefile.PL
+  au BufNewFile perlcritic.t 0r ~/.vim/skeletons/perlcritic.t
+  au BufNewFile vars.t 0r ~/.vim/skeletons/vars.t
+  au BufNewFile local_functions.t 0r ~/.vim/skeletons/local_functions.t
+  au BufNewFile used_modules.t 0r ~/.vim/skeletons/used_modules.t
 augroup END
 "}}}
 
