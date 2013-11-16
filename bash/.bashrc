@@ -56,6 +56,7 @@ alias be='bundle exec'
 alias ce='carton exec'
 alias perldoc='perldoc -MPod::Text::Color::Delight'
 alias date='LANG=en_US.UTF-8 date'
+alias date_tai='date +"%Y-%m-%dT%H:%M:%SZ"'
 
 # Golang
 program_exists () {
