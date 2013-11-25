@@ -35,7 +35,7 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'moznion/shabadou.vim-animation', { 'depends': 'osyo-manga/shabadou.vim' }
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'bling/vim-airline'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'moznion/unite-git-conflict.vim'
 NeoBundle 'altercation/vim-colors-solarized'
