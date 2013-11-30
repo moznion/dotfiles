@@ -93,6 +93,9 @@ NeoBundleLazy 'motemen/xslate-vim', {
 NeoBundleLazy 'moznion/plenv.vim', {
                 \ 'autoload': { 'filetypes': 'perl' }
               \ }
+NeoBundleLazy 'moznion/vim-plack', {
+                \ 'autoload': { 'filetypes': 'plack' }
+              \ }
 "}}}
 
 " Ruby {{{
@@ -153,6 +156,12 @@ NeoBundleLazy 'teramako/jscomplete-vim', {
                 \ 'autoload': { 'filetypes': 'javascript' }
               \ }
 "}}}
+
+" CoffeeScript {{{
+NeoBundleLazy 'kchmck/vim-coffee-script', {
+                \ 'autoload': { 'filetypes': 'coffee' }
+              \ }
+" }}}
 
 " Java {{{
 NeoBundleLazy 'vim-scripts/javacomplete', {
@@ -536,6 +545,7 @@ augroup END
 "----------------------------------------------------------------------------
 set wildmenu    "Use powerful command line auto-completion
 set nobackup    "Inhibit making backup
+set nowritebackup
 set noswapfile  "Inhibit creating swap file
 set autoread    "Reload automatically
 set vb t_vb=    "Disable beep
@@ -796,3 +806,12 @@ augroup END
 set rtp+=$GOROOT/misc/vim
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 set completeopt=menu,preview
+
+"----------------------------------------------------------------------------
+" CoffeeScript
+"----------------------------------------------------------------------------
+augroup CoffeeScriptAutoCmd
+  au!
+  au BufNewFile,BufRead *.coffee set filetype=coffee
+  au FileType coffee  setlocal sw=2 sts=2 ts=2 et
+augroup END
