@@ -63,6 +63,7 @@ NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'h1mesuke/textobj-wiw'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tsaleh/vim-matchit'
+NeoBundle 'moznion/usui-paren.vim'
 "}}}
 
 " Perl {{{
@@ -813,5 +814,13 @@ set completeopt=menu,preview
 augroup CoffeeScriptAutoCmd
   au!
   au BufNewFile,BufRead *.coffee set filetype=coffee
-  au FileType coffee  setlocal sw=2 sts=2 ts=2 et
+  au FileType coffee setlocal sw=2 sts=2 ts=2 et
+augroup END
+
+"----------------------------------------------------------------------------
+" Common Lisp
+"----------------------------------------------------------------------------
+augroup CommonLispAutoCmd
+  au!
+  au FileType lisp UsuiParenActivate
 augroup END
