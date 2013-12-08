@@ -1,8 +1,4 @@
 versa
 tokenizer
-moznion
 poc
 benchmarking
-utf-8
-env->{'plack.request.withencoding.encoding'}>
-CGI.pm-compatible
