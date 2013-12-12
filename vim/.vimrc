@@ -823,4 +823,5 @@ augroup END
 augroup CommonLispAutoCmd
   au!
   au FileType lisp UsuiParenActivate
+  au FileType lisp setlocal sw=2 sts=2 ts=2 et
 augroup END
