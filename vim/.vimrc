@@ -255,9 +255,12 @@ augroup END
 
 augroup MyAutoCmd
   au!
-  au BufNewFile * set fileformat=unix
-  au BufNewFile * set fileencoding=utf-8
+  au MyAutoCmd BufNewFile,BufRead * set fileformat=unix
+  au MyAutoCmd BufNewFile,BufRead * set encoding=utf-8
+  au MyAutoCmd BufNewFile,BufRead * set fileencoding=utf-8
 augroup END
+
+set fileencodings=utf-8,shift-jis,euc-jp,cp932
 
 filetype plugin indent on
 syntax on
