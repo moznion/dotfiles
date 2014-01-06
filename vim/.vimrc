@@ -216,6 +216,11 @@ NeoBundleLazy 'jnwhiteh/vim-golang', {
               \ }
 " }}}
 
+NeoBundleLazy 'moznion/vim-ltsv', {
+                \ 'autoload': { 'filetypes': ['ltsv'] }
+              \ }
+" }}}
+
 " Installation check.
 if neobundle#exists_not_installed_bundles()
   echomsg 'Not installed bundles : ' .
@@ -637,6 +642,7 @@ augroup PerlAutoCmd
   au BufNewFile,BufRead *.tx set syntax=xslate
   au BufNewFile,BufRead *.tt set filetype=xslate
   au BufNewFile,BufRead *.tt set syntax=xslate
+  au FileType xslate set shiftwidth=2 tabstop=2
 augroup END
 
 augroup eplAutoCmd
