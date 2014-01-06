@@ -700,6 +700,13 @@ map <silent> <Leader>ptv <Esc> :'<,'>! perltidy -se<CR>
 " Syntastic {{{
 if !exists('g:syntastic_perl_lib_path')
   let g:syntastic_perl_lib_path = []
+else
+  let lib_paths = split(g:syntastic_perl_lib_path, ',')
+  unlet g:syntastic_perl_lib_path
+  let g:syntastic_perl_lib_path = []
+  for lib_path in lib_paths
+    call add(g:syntastic_perl_lib_path, lib_path)
+  endfor
 endif
 " }}}
 
