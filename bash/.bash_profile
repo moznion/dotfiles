@@ -1,13 +1,15 @@
 source "$HOME/.bashrc"
 
 if [ -d $HOME/.plenv ] ; then
-  export PATH="$HOME/.plenv/bin:$PATH"
+  plenv_home="$HOME/.plenv"
+  export PATH="$plenv_home/bin:$plenv_home/shims:$PATH"
   eval "$(plenv init -)"
 fi
 
 # rbenv
 if [ -d $HOME/.rbenv ] ; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
+  rbenv_home="$HOME/.rbenv"
+  export PATH="$rbenv_home/bin:$rbenv_home/shims:$PATH"
   eval "$(rbenv init -)"
 fi
 
