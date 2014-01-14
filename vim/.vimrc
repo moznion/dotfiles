@@ -41,6 +41,8 @@ NeoBundle 'moznion/unite-git-conflict.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'moznion/hateblo.vim'
+NeoBundle 'chrisbra/SudoEdit.vim'
+NeoBundle 'kana/vim-fakeclip'
 "}}}
 
 " Input Support {{{
