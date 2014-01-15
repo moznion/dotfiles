@@ -160,7 +160,10 @@ NeoBundleLazy 'jelera/vim-javascript-syntax', {
 NeoBundleLazy 'teramako/jscomplete-vim', {
                 \ 'autoload': { 'filetypes': 'javascript' }
               \ }
-"}}}
+NeoBundleLazy 'moznion/jskotobuki-vim', {
+                \ 'autoload': { 'filetypes': 'javascript' }
+              \ }
+" }}}
 
 " CoffeeScript {{{
 NeoBundleLazy 'kchmck/vim-coffee-script', {
