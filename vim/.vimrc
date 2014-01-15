@@ -39,10 +39,12 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'moznion/unite-git-conflict.vim'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tomasr/molokai'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'moznion/hateblo.vim'
 NeoBundle 'chrisbra/SudoEdit.vim'
 NeoBundle 'kana/vim-fakeclip'
+NeoBundle 'h1mesuke/vim-alignta'
 "}}}
 
 " Input Support {{{
@@ -524,6 +526,10 @@ func! s:RemoveWhiteSpaceAtTail()
   endif
 endf
 " }}}
+
+" Fall in by the ruly-character
+vnoremap <silent><C-X><C-X> : <C-u>'<,'>Alignta =<CR>
+vnoremap <silent><C-X><C-S> : <C-u>'<,'>Alignta =><CR>
 
 "----------------------------------------------------------------------------
 " When open the file
