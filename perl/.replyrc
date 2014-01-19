@@ -6,6 +6,7 @@ script_line3 = use 5.016003
 history_file = '.hist'
 history_length = 100
 
+[LoadClass]
 [Interrupt]
 [FancyPrompt]
 [DataDumper]
@@ -14,5 +15,10 @@ history_length = 100
 [Packages]
 [LexicalPersistence]
 [ResultCache]
-[Autocomplete::Packages]
+[Autocomplete::Globals]
+[Autocomplete::Keywords]
 [Autocomplete::Lexicals]
+[Autocomplete::Methods]
+[Autocomplete::Packages]
+[Autocomplete::Functions]
+[Autocomplete::Commands]

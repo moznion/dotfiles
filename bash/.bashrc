@@ -58,6 +58,7 @@ alias perldoc='perldoc -MPod::Text::Color::Delight'
 alias date='LANG=en_US.UTF-8 date'
 alias date_tai='date +"%Y-%m-%dT%H:%M:%SZ"'
 alias tmux="TERM=xterm-256color tmux"
+alias reply="PERL_RL=Caroline reply"
 
 # Golang
 program_exists () {
