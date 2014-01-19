@@ -1,0 +1,18 @@
+script_line1 = use strict
+script_line2 = use warnings
+script_line3 = use 5.016003
+
+[ReadLine]
+history_file = '.hist'
+history_length = 100
+
+[Interrupt]
+[FancyPrompt]
+[DataDumper]
+[Colors]
+[Hints]
+[Packages]
+[LexicalPersistence]
+[ResultCache]
+[Autocomplete::Packages]
+[Autocomplete::Lexicals]
