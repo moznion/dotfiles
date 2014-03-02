@@ -528,12 +528,18 @@ endf
 "}}}
 
 " Removing white spaces on end of line when saved file {{{
-au MyAutoCmd BufWritePre * call s:RemoveWhiteSpaceAtTail()
-func! s:RemoveWhiteSpaceAtTail()
-  if &ft != 'markdown'
+let b:does_remove_trailing_white_space = 1
+au MyAutoCmd BufWritePre * call s:removeTrailingWhiteSpace()
+func! s:removeTrailingWhiteSpace()
+  if &ft != 'markdown' && b:does_remove_trailing_white_space == 1
     :%s/\s\+$//ge
   endif
 endf
+
+command! -nargs=0 NotRemoveTrailingWhiteSpace call s:changeRemovingTrailingWhiteSpaceStatus(0)
+func! s:changeRemovingTrailingWhiteSpaceStatus(status)
+  let b:does_remove_trailing_white_space = a:status
+endfunc
 " }}}
 
 " Fall in by the ruly-character
