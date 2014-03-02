@@ -1,3 +1,8 @@
+if [ -x /usr/libexec/path_helper ]; then
+  PATH=""
+  eval `/usr/libexec/path_helper -s`
+fi
+
 source "$HOME/.bashrc"
 
 if [ -d $HOME/.plenv ] ; then
@@ -19,4 +24,11 @@ if [ -d $HOME/.nvm ] ; then
   nvm use default > /dev/null
   npm_dir=${NVM_PATH}_modules
   export NODE_PATH=$npm_dir
+fi
+
+# pyenv
+if [ -d $HOME/.pyenv ] ; then
+  pyenv_home="$HOME/.pyenv"
+  export PATH="$pyenv_home/bin:$pyenv_home/shims:$PATH"
+  eval "$(pyenv init -)"
 fi
