@@ -1,0 +1,141 @@
+tap homebrew/binary || true
+tap homebrew/dupes || true
+tap homebrew/versions || true
+update || true
+
+install libao || true
+install libevent || true
+install libffi || true
+install libgeotiff || true
+install libgpg-error || true
+install libid3tag || true
+install libksba || true
+install liblwgeom || true
+install libpng || true
+install libsigsegv || true
+install libspatialite || true
+install libtasn1 || true
+install libtiff || true
+install libtool || true
+install libxml2 || true
+install libxslt || true
+install libyaml || true
+
+install giflib || true
+install glib || true
+install lzlib || true
+
+install jpeg || true
+install lame || true
+
+install autoconf || true
+install automake || true
+install cmake || true
+
+install git || true
+install git-flow || true
+install tig || true
+install hub || true
+
+install homebrew/dupes/apr || true
+
+install emacs || true
+install vim --with-features=huge --with-lua || true
+
+install atk || true
+install bash-completion || true
+install binutils || true
+install cairo || true
+install checkstyle || true
+install colordiff || true
+install faac || true
+install ffmpeg || true
+install fontconfig || true
+install fontforge || true
+install freetype || true
+install freexl || true
+install gd || true
+install gdal || true
+install gdbm || true
+install gdk-pixbuf || true
+install geos || true
+install gettext || true
+install gflags || true
+install gforth || true
+install glog || true
+install gmp || true
+install gnuplot || true
+install gnutls || true
+install gobject-introspection || true
+install gpp || true
+install homebrew/dupes/grep || true
+install groff || true
+install gtk+ || true
+install harfbuzz || true
+install hdf5 || true
+install htop-osx || true
+install icu4c || true
+install imagemagick || true
+install jq || true
+install json-c || true
+install lha || true
+install little-cms || true
+install llvm || true
+install mad || true
+install markdown || true
+install md5sha1sum || true
+install mecab || true
+install mecab-ipadic || true
+install mp3gain || true
+install msgpack || true
+install neon || true
+install netcdf || true
+install nettle || true
+install nginx || true
+install nkf || true
+install openssl || true
+install ossp-uuid || true
+install p11-kit || true
+install pango || true
+install pcre || true
+install pixman || true
+install pkg-config || true
+install postgresql || true
+install proj || true
+install qemu || true
+install readline || true
+install reattach-to-user-namespace || true
+install rsense || true
+install subversion || true
+install szip || true
+install terminal-notifier || true
+install texi2html || true
+install texinfo || true
+install the_silver_searcher || true
+install tmux || true
+install tree || true
+install watch || true
+install wget || true
+install x264 || true
+install xvid || true
+install xz || true
+install yasm || true
+
+install aspell || true
+install ispell || true
+
+install maven || true
+install lua || true
+install scala || true
+install sbt || true
+install clisp || true
+install go || true
+install homebrew/binary/jsl || true
+
+install phantomjs || true
+install casperjs || true
+
+install sqlite || true
+install redis || true
+install mongodb || true
+install memcached || true
