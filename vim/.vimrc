@@ -660,8 +660,8 @@ augroup PerlAutoCmd
   au FileType perl set shiftwidth=4 tabstop=4
   au BufNewFile,BufRead *.tx set filetype=xslate
   au BufNewFile,BufRead *.tx set syntax=xslate
-  au BufNewFile,BufRead *.tt set filetype=xslate
-  au BufNewFile,BufRead *.tt set syntax=xslate
+  au BufNewFile,BufRead *.tt set filetype=xslate.tt
+  au BufNewFile,BufRead *.tt set syntax=xslate.tt
   au FileType xslate set shiftwidth=2 tabstop=2
 augroup END
 
