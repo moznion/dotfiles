@@ -45,6 +45,7 @@ NeoBundle 'moznion/hateblo.vim'
 NeoBundle 'chrisbra/SudoEdit.vim'
 NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'h1mesuke/vim-alignta'
+NeoBundle 'moznion/git-checkout-here.vim'
 "}}}
 
 " Input Support {{{
@@ -60,6 +61,7 @@ else
 endif
 
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tomtom/tcomment_vim'

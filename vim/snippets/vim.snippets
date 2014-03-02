@@ -1,0 +1,7 @@
+snippet stash
+    let s:save_cpo = &cpo
+    set cpo&vim
+
+snippet pop
+    let &cpo = s:save_cpo
+    unlet s:save_cpo
