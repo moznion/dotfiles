@@ -4,7 +4,7 @@ snippet dump
 snippet peek
     use Devel::Peek; warn Dump(${1:code}); # TODO remove
 
-snippet file_load
+snippet slurp
     do { local $/; <${1:filehandle}>; }
 
 snippet has
