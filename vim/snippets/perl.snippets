@@ -5,7 +5,7 @@ snippet peek
     use Devel::Peek; warn Dump(${1:code}); # TODO remove
 
 snippet slurp
-    do { local $/; <${1:filehandle}>; }
+    do { local $/; <${1:filehandle}> };
 
 snippet has
     has ${1:member} => (
@@ -17,3 +17,8 @@ snippet subtest
     subtest '${1:name}' => sub {
         ${2:codes}
     };
+
+snippet mocking
+    my $original_${1:var_name} = *${2:module_name}::${3:func_name}{CODE};
+    undef *$2::$3;
+    *$2::$3 = sub { ${4:mock} };
