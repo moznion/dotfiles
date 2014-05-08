@@ -46,6 +46,9 @@ NeoBundle 'chrisbra/SudoEdit.vim'
 NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'moznion/git-checkout-here.vim'
+NeoBundle 'dannyob/quickfixstatus'
+NeoBundle 'jceb/vim-hier'
+NeoBundle 'moznion/github-commit-comment.vim'
 "}}}
 
 " Input Support {{{
@@ -528,17 +531,17 @@ endf
 "}}}
 
 " Removing white spaces on end of line when saved file {{{
-let b:does_remove_trailing_white_space = 1
+let g:does_remove_trailing_white_space = 1
 au MyAutoCmd BufWritePre * call s:removeTrailingWhiteSpace()
 func! s:removeTrailingWhiteSpace()
-  if &ft != 'markdown' && b:does_remove_trailing_white_space == 1
+  if &ft != 'markdown' && g:does_remove_trailing_white_space == 1
     :%s/\s\+$//ge
   endif
 endf
 
 command! -nargs=0 NotRemoveTrailingWhiteSpace call s:changeRemovingTrailingWhiteSpaceStatus(0)
 func! s:changeRemovingTrailingWhiteSpaceStatus(status)
-  let b:does_remove_trailing_white_space = a:status
+  let g:does_remove_trailing_white_space = a:status
 endfunc
 " }}}
 
@@ -864,3 +867,4 @@ augroup CommonLispAutoCmd
   au FileType lisp UsuiParenActivate
   au FileType lisp setlocal sw=2 sts=2 ts=2 et
 augroup END
+
