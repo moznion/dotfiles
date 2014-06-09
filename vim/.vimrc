@@ -548,9 +548,11 @@ func! s:removeTrailingWhiteSpace()
   endif
 endf
 
-command! -nargs=0 NotRemoveTrailingWhiteSpace call s:changeRemovingTrailingWhiteSpaceStatus(0)
-func! s:changeRemovingTrailingWhiteSpaceStatus(status)
-  let g:does_remove_trailing_white_space = a:status
+command! -nargs=0 ToggleRemoveTrailingWhiteSpace
+  \ call s:toggleRemovingTrailingWhiteSpaceStatus()
+func! s:toggleRemovingTrailingWhiteSpaceStatus()
+  let g:does_remove_trailing_white_space =
+    \ !g:does_remove_trailing_white_space
 endfunc
 " }}}
 
