@@ -22,3 +22,10 @@ snippet mocking
     my $original_${1:var_name} = *${2:module_name}::${3:func_name}{CODE};
     undef *$2::$3;
     *$2::$3 = sub { ${4:mock} };
+
+snippet test_base_less
+    ===
+    --- dscr: ${1:dscr}
+    --- failures: ${2:failures}
+    --- params: {${3:params}}
+    --- input
