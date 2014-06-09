@@ -176,6 +176,15 @@ NeoBundleLazy 'kchmck/vim-coffee-script', {
               \ }
 " }}}
 
+" TypeScript {{{
+NeoBundleLazy 'leafgarland/typescript-vim', {
+                \ 'autoload': { 'filetypes': 'typescript' }
+              \ }
+NeoBundleLazy 'clausreinke/typescript-tools', {
+                \ 'autoload': { 'filetypes': 'typescript' }
+              \ }
+" }}}
+
 " Java {{{
 NeoBundleLazy 'vim-scripts/javacomplete', {
 \   'build': {
@@ -725,19 +734,6 @@ au PerlAutoCmd BufWritePost *.pm call s:check_package_name()
 map <silent> <Leader>pt <Esc> :%! perltidy -se<CR>
 map <silent> <Leader>ptv <Esc> :'<,'>! perltidy -se<CR>
 "}}}
-
-" Syntastic {{{
-if !exists('g:syntastic_perl_lib_path')
-  let g:syntastic_perl_lib_path = []
-else
-  let lib_paths = split(g:syntastic_perl_lib_path, ',')
-  unlet g:syntastic_perl_lib_path
-  let g:syntastic_perl_lib_path = []
-  for lib_path in lib_paths
-    call add(g:syntastic_perl_lib_path, lib_path)
-  endfor
-endif
-" }}}
 
 "----------------------------------------------------------------------------
 " JavaScript
