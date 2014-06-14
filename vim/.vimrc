@@ -842,11 +842,19 @@ augroup END
 augroup GoAutoCmd
   au!
   au BufNewFile,BufRead *.go set filetype=go
+  au BufWritePre *.go Fmt
+  au BufNewFile,BufRead *.go set sw=4 noexpandtab ts=4
+  au FileType go compiler go
 augroup END
 
-set rtp+=$GOROOT/misc/vim
-exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
-set completeopt=menu,preview
+" :Fmt などで gofmt の代わりに goimports を使う
+let g:gofmt_command = 'goimports'
+
+" Go に付属の plugin と gocode を有効にする
+set rtp^=${GOROOT}/misc/vim
+set rtp^=${GOPATH}/src/github.com/nsf/gocode/vim
+
+" 保存時に :Fmt する
 
 "----------------------------------------------------------------------------
 " CoffeeScript
