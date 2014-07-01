@@ -75,6 +75,10 @@ if program_exists go; then
   setupGOROOT
 fi
 
+# for ghq
+function ghql() {
+  cd $(ghq list -p $1 | peco || pwd)
+}
 
 bashrc_local="$HOME/.bashrc.local"
 if [ -f $bashrc_local ] ; then
