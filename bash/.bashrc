@@ -3,6 +3,11 @@ if [[ $OSTYPE =~ 'darwin' ]] && [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
+# completion (for ubuntu)
+if [[ -f /etc/bash_completion ]]; then
+  . /etc/bash_completion
+fi
+
 # Do not lock the terminal (Activate Ctrl+s)
 stty stop undef
 stty -ixon -ixoff
