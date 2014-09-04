@@ -264,11 +264,11 @@ if !exists("g:neosnippet#snippets_directory")
 endif
 let g:neosnippet#snippets_directory = $HOME . '/.vim/snippets/'
 
-func! b:openSnippetFile()
+func! OpenSnippetFile()
   let s:snippetLocate = g:neosnippet#snippets_directory . &filetype . '.snippets'
   execute ':e' . s:snippetLocate
 endf
-nnoremap <silent> <C-s><C-s> :call b:openSnippetFile()<CR>
+nnoremap <silent> <C-s><C-s> :call OpenSnippetFile()<CR>
 "}}}
 
 augroup detectfiletype
@@ -454,7 +454,7 @@ augroup END
 "----------------------------------------------------------------------------
 " vim-surround
 "----------------------------------------------------------------------------
-func! b:surroundAutoDetect(command)
+func! SurroundAutoDetect(command)
   let l:command = (a:command == 'ci') ? 'di' : a:command
   let l:command = (a:command == 'ts') ? 'cs' : l:command
   let l:currentChar = getline('.')[col('.')-1]
@@ -482,12 +482,12 @@ func! b:surroundAutoDetect(command)
   endif
 endf
 
-nnoremap <silent>dii :call b:surroundAutoDetect('di')<CR>
-nnoremap <silent>yii :call b:surroundAutoDetect('yi')<CR>
-nnoremap <silent>cii :call b:surroundAutoDetect('ci')<CR>
-nnoremap <silent>css :call b:surroundAutoDetect('cs')<CR>
-nnoremap <silent>dss :call b:surroundAutoDetect('ds')<CR>
-nnoremap <silent>tss :call b:surroundAutoDetect('ts')<CR>
+nnoremap <silent>dii :call SurroundAutoDetect('di')<CR>
+nnoremap <silent>yii :call SurroundAutoDetect('yi')<CR>
+nnoremap <silent>cii :call SurroundAutoDetect('ci')<CR>
+nnoremap <silent>css :call SurroundAutoDetect('cs')<CR>
+nnoremap <silent>dss :call SurroundAutoDetect('ds')<CR>
+nnoremap <silent>tss :call SurroundAutoDetect('ts')<CR>
 
 "----------------------------------------------------------------------------
 " Searching
@@ -531,9 +531,9 @@ au MyAutoCmd BufNewFile,BufRead * set iminsert=0  "Reset the Japanese input meth
 " Checking spelling {{{
 set spell
 au MyAutoCmd BufNewFile,BufRead *.snippets set nospell
-nnoremap <C-S><C-N> :call b:toggleSettingSpelling()<CR>
+nnoremap <C-S><C-N> :call ToggleSettingSpelling()<CR>
 
-func! b:toggleSettingSpelling()
+func! ToggleSettingSpelling()
   set spell!
   set spell?
 endf
