@@ -73,6 +73,7 @@ NeoBundle 'h1mesuke/textobj-wiw'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tsaleh/vim-matchit'
 NeoBundle 'moznion/usui-paren.vim'
+NeoBundle 'rhysd/clever-f.vim'
 "}}}
 
 " Perl {{{
