@@ -1,4 +1,7 @@
 snippet dump
+    use Data::Dumper; warn Dumper(${1:code}); # TODO remove
+
+snippet dumpc
     use Data::Dumper::Concise; warn Dumper(${1:code}); # TODO remove
 
 snippet peek
