@@ -32,3 +32,10 @@ if [ -d $HOME/.pyenv ] ; then
   export PATH="$pyenv_home/bin:$pyenv_home/shims:$PATH"
   eval "$(pyenv init -)"
 fi
+
+# phpenv
+if [ -d $HOME/.phpenv ] ; then
+  phpenv_home="$HOME/.phpenv"
+  export PATH="$phpenv_home/bin:$HOME/.composer/vendor/bin:$PATH"
+  eval "$(phpenv init -)"
+fi
