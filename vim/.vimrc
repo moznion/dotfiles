@@ -201,6 +201,7 @@ NeoBundleLazy 'moznion/jcommenter.vim', {
 NeoBundleLazy 'moznion/java_getset.vim', {
                 \ 'autoload': { 'filetypes': 'java' }
               \ }
+NeoBundle 'chaquotay/ftl-vim-syntax'
 "}}}
 
 " HTML/CSS {{{
@@ -799,7 +800,6 @@ augroup JavaAutoCmd
   au FileType java map <C-c><C-j> :call JCommentWriter()<CR> "Set key map for jcommenter
 augroup END
 
-
 " Apply K&R style block to java_getset (This is unique function)
 let b:javagetset_enable_K_and_R=1
 
@@ -812,6 +812,22 @@ let g:java_highlight_debug=1
 let g:java_allow_cpp_keywords=1
 let g:java_space_errors=1
 let g:java_highlight_functions=1
+
+augroup FtlAutoCmd
+  au!
+  au BufNewFile,BufRead *.ftl set filetype=ftl
+  au BufNewFile,BufRead *.ftl set syntax=html
+  au FileType ftl set shiftwidth=2 tabstop=2
+  au FileTYpe ftl nnoremap <silent> <C-c><C-v> :call b:toggleSyntaxBetweenFtlAndHtml()<CR>
+augroup END
+
+func! b:toggleSyntaxBetweenFtlAndHtml()
+  if &syntax ==# 'html'
+    set syntax=ftl
+  else
+    set syntax=html
+  endif
+endf
 
 "----------------------------------------------------------------------------
 " Arduino
