@@ -580,6 +580,7 @@ augroup SkeletonAu
   au BufNewFile *.pl 0r ~/.vim/skeletons/skeleton.pl
   au BufNewFile *.t 0r ~/.vim/skeletons/skeleton.t
   au BufNewFile *.rb 0r ~/.vim/skeletons/skeleton.rb
+  au BufNewFile *.py 0r ~/.vim/skeletons/skeleton.py
   au BufNewFile Makefile.PL 0r ~/.vim/skeletons/skeleton.Makefile.PL
   au BufNewFile perlcritic.t 0r ~/.vim/skeletons/perlcritic.t
   au BufNewFile vars.t 0r ~/.vim/skeletons/vars.t
