@@ -187,20 +187,6 @@ NeoBundleLazy 'clausreinke/typescript-tools', {
 " }}}
 
 " Java {{{
-NeoBundleLazy 'vim-scripts/javacomplete', {
-\   'build': {
-\       'cygwin': 'javac autoload/Reflection.java',
-\       'mac': 'javac autoload/Reflection.java',
-\       'unix': 'javac autoload/Reflection.java',
-\   },
-\   'autoload': { 'filetypes': 'java' }
-\}
-NeoBundleLazy 'moznion/jcommenter.vim', {
-                \ 'autoload': { 'filetypes': 'java' }
-              \ }
-NeoBundleLazy 'moznion/java_getset.vim', {
-                \ 'autoload': { 'filetypes': 'java' }
-              \ }
 NeoBundle 'chaquotay/ftl-vim-syntax'
 "}}}
 
@@ -792,28 +778,6 @@ au RubyAutoCmd BufNewFile *_spec.rb call s:rspec_template()
 "----------------------------------------------------------------------------
 " Java
 "----------------------------------------------------------------------------
-augroup JavaAutoCmd
-  au!
-  au FileType java setlocal
-        \ omnifunc=javacomplete#Complete
-        \ completefunc=javacomplete#CompleteParamsInfo
-  au FileType java set shiftwidth=4 tabstop=4
-  au FileType java map <C-c><C-j> :call JCommentWriter()<CR> "Set key map for jcommenter
-augroup END
-
-" Apply K&R style block to java_getset (This is unique function)
-let b:javagetset_enable_K_and_R=1
-
-" Add "this" keyword to member of getter and setter
-let b:javagetset_add_this=1
-
-" Syntax highlight
-let g:java_highlight_all=1
-let g:java_highlight_debug=1
-let g:java_allow_cpp_keywords=1
-let g:java_space_errors=1
-let g:java_highlight_functions=1
-
 augroup FtlAutoCmd
   au!
   au BufNewFile,BufRead *.ftl set filetype=ftl
