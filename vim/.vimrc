@@ -783,10 +783,10 @@ augroup FtlAutoCmd
   au BufNewFile,BufRead *.ftl set filetype=ftl
   au BufNewFile,BufRead *.ftl set syntax=html
   au FileType ftl set shiftwidth=2 tabstop=2
-  au FileTYpe ftl nnoremap <silent> <C-c><C-v> :call b:toggleSyntaxBetweenFtlAndHtml()<CR>
+  au FileTYpe ftl nnoremap <silent> <C-c><C-v> :call s:toggleSyntaxBetweenFtlAndHtml()<CR>
 augroup END
 
-func! b:toggleSyntaxBetweenFtlAndHtml()
+func! s:toggleSyntaxBetweenFtlAndHtml()
   if &syntax ==# 'html'
     set syntax=ftl
   else
