@@ -64,6 +64,7 @@ alias date='LANG=en_US.UTF-8 date'
 alias date_tai='date +"%Y-%m-%dT%H:%M:%SZ"'
 alias tmux="TERM=xterm-256color tmux"
 alias reply="PERL_RL=Caroline reply"
+alias gr='cd ./$(git rev-parse --show-cdup)';
 
 # Golang
 program_exists () {
@@ -74,7 +75,6 @@ if program_exists go; then
   function setupGOROOT()
   {
     export GOPATH=$HOME/.go
-    export GOROOT=/usr/local/opt/go/libexec
     export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
   }
   setupGOROOT
@@ -91,4 +91,3 @@ if [ -f $bashrc_local ] ; then
 fi
 
 export LANG=ja_JP.UTF-8
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0_25)
