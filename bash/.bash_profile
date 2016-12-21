@@ -39,3 +39,11 @@ if [ -d $HOME/.phpenv ] ; then
   export PATH="$phpenv_home/bin:$HOME/.composer/vendor/bin:$PATH"
   eval "$(phpenv init -)"
 fi
+
+if [ -d $HOME/.rakudobrew ] ; then
+  rakudobrew_home="$HOME/.rakudobrew"
+  export PATH="$rakudobrew_home/bin:$rakudobrew_home/moar-nom/install/share/perl6/site/bin:$PATH"
+  eval "$(rakudobrew init -)"
+fi
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
