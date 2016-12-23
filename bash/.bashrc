@@ -65,6 +65,8 @@ alias date_tai='date +"%Y-%m-%dT%H:%M:%SZ"'
 alias tmux="TERM=xterm-256color tmux"
 alias reply="PERL_RL=Caroline reply"
 alias gr='cd ./$(git rev-parse --show-cdup)';
+alias p=perl6
+alias nake='npm run'
 
 # Golang
 program_exists () {
@@ -91,3 +93,4 @@ if [ -f $bashrc_local ] ; then
 fi
 
 export LANG=ja_JP.UTF-8
+
