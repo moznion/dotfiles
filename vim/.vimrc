@@ -39,7 +39,7 @@ Plug 'rhysd/clever-f.vim'
 "}}}
 
 " Perl {{{
-Plug 'vim-perl/vim-perl', { 'for': 'perl' }
+Plug 'vim-perl/vim-perl', { 'for': ['perl', 'perl6'] }
 Plug 'hotchpotch/perldoc-vim', { 'for': 'perl' }
 Plug 'c9s/perlomni.vim', { 'for': 'perl' }
 Plug 'moznion/vim-cpanfile', { 'for': 'cpanfile' }
