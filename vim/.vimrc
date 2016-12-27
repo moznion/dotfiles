@@ -113,6 +113,11 @@ endf
 nnoremap <silent> <C-s><C-s> :call OpenSnippetFile()<CR>
 "}}}
 
+" Neosnippet
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
+
 augroup detectfiletype
   au!
   au BufNewFile,BufRead *.t setf perl
