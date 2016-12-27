@@ -22,6 +22,7 @@ Plug 'dannyob/quickfixstatus'
 Plug 'jceb/vim-hier'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 "}}}
 
 " Input Support {{{
