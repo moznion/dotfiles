@@ -22,7 +22,6 @@ Plug 'dannyob/quickfixstatus'
 Plug 'jceb/vim-hier'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 "}}}
 
 " Input Support {{{
@@ -40,7 +39,7 @@ Plug 'rhysd/clever-f.vim'
 "}}}
 
 " Perl {{{
-Plug 'vim-perl/vim-perl', { 'for': ['perl', 'perl6'] }
+" Plug 'vim-perl/vim-perl', { 'for': ['perl', 'perl6'] }
 Plug 'hotchpotch/perldoc-vim', { 'for': 'perl' }
 Plug 'c9s/perlomni.vim', { 'for': 'perl' }
 Plug 'moznion/vim-cpanfile', { 'for': 'cpanfile' }
@@ -149,8 +148,6 @@ let g:quickrun_config = {
 \   'hook/simple_anim/enable' : 1,
 \   'hook/simple_anim/wait' : 1,
 \   'hook/time/enable': 1,
-\   'runner': 'vimproc',
-\   'runner/vimproc/updatetime': 40,
 \   'outputter/buffer/split': ':botright 8sp',
 \ }
 \}
