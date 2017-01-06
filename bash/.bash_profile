@@ -48,7 +48,7 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
-if [ -f $(brew --prefix)/etc/bash_completion.d ]; then
+if type brew > /dev/null 2>&1 && [ -f $(brew --prefix)/etc/bash_completion.d ]; then
   . $(brew --prefix)/etc/bash_completion.d
 fi
 
