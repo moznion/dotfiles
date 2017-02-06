@@ -32,3 +32,13 @@ snippet test_base_less
     --- failures: ${2:failures}
     --- params: {${3:params}}
     --- input
+
+snippet mouse
+
+    use Mouse;
+
+    ${1:code}
+
+    no Mouse;
+    __PACKAGE__->meta->make_immutable;
+
