@@ -473,7 +473,12 @@ map <silent> <Leader>ptv <Esc> :'<,'>! perltidy -se<CR>
 "----------------------------------------------------------------------------
 augroup JavaScriptAutoCmd
   au!
-  au FileType javascript set shiftwidth=4 tabstop=4
+  au FileType javascript set shiftwidth=2 tabstop=2
+augroup END
+
+augroup JSONAutoCmd
+  au!
+  au FileType json set shiftwidth=2 tabstop=2
 augroup END
 
 "----------------------------------------------------------------------------
