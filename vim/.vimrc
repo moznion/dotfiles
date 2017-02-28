@@ -569,7 +569,15 @@ let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_build_constraints = 1
+let g:go_fmt_autosave = 1
 let g:go_fmt_command = "goimports"
+
+augroup GoAutoCmd
+  au!
+  au FileType go set shiftwidth=4 tabstop=4
+augroup END
+
+au GoAutoCmd BufWritePost *.go :GoBuild
 
 "----------------------------------------------------------------------------
 " CoffeeScript
