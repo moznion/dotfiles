@@ -34,11 +34,11 @@ if [ -d $HOME/.pyenv ] ; then
 fi
 
 # phpenv
-# if [ -d $HOME/.phpenv ] ; then
-#   phpenv_home="$HOME/.phpenv"
-#   export PATH="$phpenv_home/bin:$HOME/.composer/vendor/bin:$PATH"
-#   eval "$(phpenv init -)"
-# fi
+if [ -d $HOME/.phpenv ] ; then
+  phpenv_home="$HOME/.phpenv"
+  export PATH="$phpenv_home/bin:$HOME/.composer/vendor/bin:$PATH"
+  eval "$(phpenv init -)"
+fi
 
 if [ -d $HOME/.rakudobrew ] ; then
   rakudobrew_home="$HOME/.rakudobrew"
