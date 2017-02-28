@@ -161,7 +161,7 @@ augroup END
 "----------------------------------------------------------------------------
 " For ctrlp
 "----------------------------------------------------------------------------
-let g:ctrlp_map = '<c-w>'
+let g:ctrlp_map = '<c-i>'
 noremap <silent><Leader>uf :CtrlP<CR>
 noremap <silent><Leader>ub :CtrlPBuffer<CR>
 noremap <silent><Leader>um :CtrlPMixed<CR>
