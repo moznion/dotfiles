@@ -33,6 +33,7 @@ if [[ $OSTYPE =~ 'darwin' ]] && [ -d $macvim_path ] ;then
   export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
   export PATH="$macvim_path:$PATH"
 fi
+export EDITOR='vim'
 
 # colorize grep family
 alias grep='grep --color=auto'
@@ -47,7 +48,7 @@ alias ll="ls -alF"
 
 # prompt
 export GIT_PS1_SHOWSTASHSTATE=1
-export PS1="\[\033[7;32m\]\u@\H\[\033[7;34m\] \w\[\033[7;35m\]\$(__git_ps1)\[\033[00m\] \$"
+export PS1="\[\033[7;32m\]\u@\H\[\033[7;34m\] \w\[\033[7;35m\]\$(__git_ps1)\[\033[00m\] \$ "
 
 # Vim
 alias vi='vim'
@@ -67,6 +68,16 @@ alias reply="PERL_RL=Caroline reply"
 alias gr='cd ./$(git rev-parse --show-cdup)';
 alias p=perl6
 alias nake='npm run'
+
+if [[ $OSTYPE =~ 'darwin' ]] ; then
+  if type gsed > /dev/null 2>&1; then
+    alias sed='gsed'
+  fi
+
+  if type gdate > /dev/null 2>&1; then
+    alias date='gdate'
+  fi
+fi
 
 # Golang
 program_exists () {
@@ -93,4 +104,6 @@ if [ -f $bashrc_local ] ; then
 fi
 
 export LANG=ja_JP.UTF-8
+
+export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
