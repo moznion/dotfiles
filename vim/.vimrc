@@ -22,6 +22,7 @@ Plug 'dannyob/quickfixstatus'
 Plug 'jceb/vim-hier'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'thinca/vim-visualstar'
 "}}}
 
 " Input Support {{{
@@ -435,6 +436,16 @@ func! s:pm_template()
   call append(5, '')
   call append(6, '')
   call append(7, '1;')
+  call append(8, '')
+  call append(9, '__END__')
+  call append(10, '')
+  call append(11, '=encoding utf8')
+  call append(12, '')
+  call append(13, '=head1 NAME')
+  call append(14, '')
+  call append(15, path . ' - ')
+  call append(16, '')
+  call append(17, '=cut')
   call cursor(6, 0)
 endf
 au PerlAutoCmd BufNewFile *.pm call s:pm_template()
@@ -497,7 +508,7 @@ augroup END
 augroup RubyAutoCmd
   au!
   au FileType ruby set shiftwidth=2 tabstop=2
-  au FileType ruby set omnifunc=RSenseCompleteFunction
+  " au FileType ruby set omnifunc=RSenseCompleteFunction
 augroup END
 
 augroup ERubyAutoCmd
