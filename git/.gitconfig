@@ -11,11 +11,16 @@
 	dw = diff --word-diff
 	pl = pull
 	ps = push
+	s = sel
 [color]
 	ui = auto
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
+[pager]
+    log = diff-highlight | less
+    show = diff-highlight | less
+    diff = diff-highlight | less
 [user]
 	name  = moznion
 	email = moznion@gmail.com
