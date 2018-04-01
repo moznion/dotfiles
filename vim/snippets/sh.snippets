@@ -1,0 +1,5 @@
+snippet current
+    $(cd "$(dirname "\$0")" || exit; pwd)
+
+snippet gitroot
+    $(cd ./"$(git rev-parse --show-cdup)" || exit; pwd)

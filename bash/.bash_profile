@@ -18,18 +18,16 @@ if [ -d $HOME/.rbenv ] ; then
   eval "$(rbenv init -)"
 fi
 
-# nvm
-if [ -d $HOME/.nvm ] ; then
-  [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
-  nvm use default > /dev/null
-  npm_dir=${NVM_PATH}_modules
-  export NODE_PATH=$npm_dir
+# nodenv
+if [ -d /Users/moznion/.nodenv ] ; then
+  export PATH="$HOME/.nodenv/bin:$PATH"
+  eval "$(nodenv init -)"
 fi
 
 # pyenv
 if [ -d $HOME/.pyenv ] ; then
-  pyenv_home="$HOME/.pyenv"
-  export PATH="$pyenv_home/bin:$pyenv_home/shims:$PATH"
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi
 
@@ -52,3 +50,5 @@ if type brew > /dev/null 2>&1 && [ -f $(brew --prefix)/etc/bash_completion.d ]; 
   . $(brew --prefix)/etc/bash_completion.d
 fi
 
+[[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
+eval "$(direnv hook bash)"

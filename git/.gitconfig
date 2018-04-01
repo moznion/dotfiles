@@ -24,3 +24,5 @@
 [user]
 	name  = moznion
 	email = moznion@gmail.com
+[http "https://gopkg.in"]
+	followRedirects = true

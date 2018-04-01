@@ -2,6 +2,9 @@
 if [[ $OSTYPE =~ 'darwin' ]] && [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
+if [[ $OSTYPE =~ 'darwin' ]] && [ -d `brew --prefix`/etc/bash_completion.d ]; then
+  for completion_file in `brew --prefix`/etc/bash_completion.d/*; do source $completion_file; done
+fi
 
 # completion (for ubuntu)
 if [[ -f /etc/bash_completion ]]; then
@@ -77,6 +80,10 @@ if [[ $OSTYPE =~ 'darwin' ]] ; then
   if type gdate > /dev/null 2>&1; then
     alias date='gdate'
   fi
+
+  if type gfind > /dev/null 2>&1; then
+    alias find='gfind'
+  fi
 fi
 
 # Golang
@@ -95,7 +102,12 @@ fi
 
 # for ghq
 function ghql() {
-  cd $(ghq list -p $1 | peco || pwd)
+  cd "$(ghq list -p "$1" | peco || pwd)" || exit 1
+}
+
+function gopl() {
+  path="$(cd "${HOME}/.go/src" || exit 1; gfind -mindepth 3 -maxdepth 3 -type d | grep "$1" | peco)"
+  cd "${HOME}/.go/src${path:1}" || exit 1
 }
 
 bashrc_local="$HOME/.bashrc.local"

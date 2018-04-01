@@ -68,7 +68,8 @@ Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 " TypeScript {{{
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
-Plug 'clausreinke/typescript-tools', { 'for': 'typescript' }
+" Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
+Plug 'clausreinke/typescript-tools.vim', { 'for': 'typescript' }
 " }}}
 
 " HTML/CSS {{{
@@ -76,6 +77,10 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }
 Plug 'hail2u/vim-css3-syntax', { 'for': ['html', 'css'] }
 Plug 'lilydjwg/colorizer', { 'for': ['html', 'css'] }
 "}}}
+
+" Pub (Jade) {{{
+Plug 'digitaltoad/vim-pug', { 'for': ['pug'] }
+" }}}
 
 " Arduino {{{
 Plug 'tclem/vim-arduino', { 'for': 'arduino' }
