@@ -1,28 +1,49 @@
 [alias]
-	st = status -sb
-	l = log --decorate
-	lo = log --decorate --oneline
-	ci = commit
-	co = checkout
-	rb = rebase
-	mg = merge
-	br = branch
-	di = diff
-	dw = diff --word-diff
-	pl = pull
-	ps = push
-	s = sel
+    st = status -sb
+    l = log --decorate
+    lo = log --decorate --oneline
+    ci = commit --signoff
+    co = checkout
+    rb = rebase
+    mg = merge
+    br = branch
+    di = diff
+    dw = diff --word-diff
+    pl = pull
+    ps = push
+    s = sel
+    sw = switch
 [color]
-	ui = auto
+    ui = auto
 [core]
-	editor = vim
-	excludesfile = ~/.gitignore
+    editor = vim
+    excludesfile = ~/.gitignore
 [pager]
     log = diff-highlight | less
     show = diff-highlight | less
     diff = diff-highlight | less
 [user]
-	name  = moznion
-	email = moznion@gmail.com
+    name = moznion
+    email = moznion@mail.moznion.net
+    signingKey = 8A8E545887E483D8760AA1AC204AC05787A37E40
+[include]
+    path = ~/.gitconfig.local
 [http "https://gopkg.in"]
-	followRedirects = true
+    followRedirects = true
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[commit]
+    gpgsign = true
+[pull]
+    ff = only
+[init]
+    defaultBranch = main
+[sendemail]
+    smtpserver = mail.moznion.net
+    smtpuser = moznion@mail.moznion.net
+    smtpserverport = 587
+    smtpauth = CRAM-MD5
+    # smtpencryption = tls
