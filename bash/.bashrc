@@ -11,6 +11,14 @@ if [[ -f /etc/bash_completion ]]; then
   . /etc/bash_completion
 fi
 
+if type dircolors > /dev/null 2>&1; then
+  if [ -f ~/dir_colors/dircolors ]; then
+    eval "$(dircolors -b ~/.dir_colors/dircolors)"
+  else
+    eval "$(dircolors -b)"
+  fi
+fi
+
 # Do not lock the terminal (Activate Ctrl+s)
 stty stop undef
 stty -ixon -ixoff
@@ -23,8 +31,8 @@ HISTCONTROL=ignoredups:ignorespace
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=1000000
+HISTFILESIZE=1000000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -44,7 +52,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # ls
-alias ls="ls -CFG"
+alias ls="ls --color -F -G"
 alias l="ls"
 alias la="ls -A"
 alias ll="ls -alF"
@@ -118,4 +126,4 @@ fi
 export LANG=ja_JP.UTF-8
 
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
-
+export PAGER="less -R"
