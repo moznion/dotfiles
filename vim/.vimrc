@@ -1,4 +1,5 @@
 scriptencoding utf-8
+set encoding=utf-8
 set nocompatible " Purge compatible with Vi
 
 if filereadable($HOME . '/.vimrc.local')
@@ -94,6 +95,8 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 " LTSV {{{
 Plug 'moznion/vim-ltsv', { 'for': 'ltsv' }
 " }}}
+
+Plug 'cespare/vim-toml', { 'for': 'toml' }
 
 call plug#end()
 
@@ -320,6 +323,7 @@ augroup SkeletonAu
   au BufNewFile vars.t 0r ~/.vim/skeletons/vars.t
   au BufNewFile local_functions.t 0r ~/.vim/skeletons/local_functions.t
   au BufNewFile used_modules.t 0r ~/.vim/skeletons/used_modules.t
+  au BufNewFile *.proto 0r ~/.vim/skeletons/skeleton.proto
 augroup END
 "}}}
 
@@ -343,7 +347,6 @@ inoremap :set iminsert=0
 "}}}
 
 " Kill the force killing {{{
-nnoremap <C-Z> <NOP>
 nnoremap ZZ <NOP>
 nnoremap ZQ <NOP>
 "}}}
